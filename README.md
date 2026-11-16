@@ -36,6 +36,44 @@ Kolom Outcome digunakan sebagai label klasifikasi
 7. Pelatihan Model: Melatih model menggunakan data training dengan fungsi fit().
 8. Evaluasi Model: Menggunakan fungsi score() untuk mengetahui akurasi model terhadap data testing.
 
+## Hasil
 
+Berdasarkan hasil pengujian, model SVM memperoleh akurasi sebesar 75,59% pada data testing.
 
+# Support Vector Regression (SVR) 
+## Deskripsi 
+
+Support Vector Regression (SVR) merupakan pengembangan dari Support Vector Machine yang digunakan untuk menyelesaikan permasalahan regresi atau memprediksi nilai numerik.
+Pada proyek ini, SVR digunakan untuk memprediksi gaji berdasarkan jumlah tahun pengalaman kerja menggunakan dataset Salary_Data.csv.
+
+## Dataset
+
+Dataset yang digunakan adalah Salary_Data.csv dengan jumlah 30 data dan terdiri dari dua atribut:
+1. YearsExperience: Jumlah tahun pengalaman kerja.
+2. Salary: Nilai gaji yang menjadi target prediksi.
+
+## Tahapan Proses
+
+1. Import Dataset: Membaca dataset menggunakan Pandas.
+
+2. Eksplorasi Data: Menggunakan fungsi info() untuk mengetahui struktur dan tipe data.
+
+3. Pemisahan Atribut dan Target: Memisahkan YearsExperience sebagai variabel X dan Salary sebagai variabel y.
+
+4. Transformasi Data: Menggunakan NumPy untuk mengubah bentuk data X menjadi array dua dimensi.
+
+5. Pembuatan Model: Menggunakan SVR dari Scikit-learn dengan konfigurasi parameter:
+
+C = 1000
+Gamma = 0.05
+Kernel = RBF
+
+6. Pelatihan Model: Melatih model menggunakan seluruh data yang tersedia dengan fungsi fit().
+
+7. Visualisasi: Menggunakan Matplotlib untuk menampilkan persebaran data aktual melalui Scatter Plot serta garis prediksi model SVR.
+
+## Hasil
+
+Model SVR menghasilkan visualisasi hubungan antara pengalaman kerja dan gaji. Scatter Plot menunjukkan data aktual, sedangkan garis prediksi menggambarkan hasil estimasi model berdasarkan kernel RBF.
+Notebook ini belum melakukan evaluasi menggunakan metrik seperti MAE, MSE, RMSE, atau R².
 
